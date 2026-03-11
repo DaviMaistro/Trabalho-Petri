@@ -1,3 +1,5 @@
+Membros: Davi Azevedo Maistro, Gabriel Nakagawa Adamszuke e Luís Felipe Toneto Sakuta.
+
 Ampliar as funcionalidades disponíveis nas classes ListaSimples e ListaDinamica.
 
 Lista Simples: simulada por um String[] com controle de tamanho.
