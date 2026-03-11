@@ -36,6 +36,7 @@ public class Main {
         listaDinamica.adicionarElemento("Ana");
         listaDinamica.adicionarElemento("Carlos");
         listaDinamica.adicionarElemento("Ana");
+        listaDinamica.exibir();
 
         listaDinamica.contar();
         listaDinamica.contarOcorrencias("Ana");
