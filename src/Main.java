@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         ListaSimples listaSimples = new ListaSimples(5);
+        ListaDinamica listaDinamica = new ListaDinamica();
 
         String[] nomes = {"Davi", "Raul", "Alex", "João"};
 
@@ -31,6 +32,15 @@ public class Main {
 
         listaSimples.exibirElementos();
         listaSimples.inserir(4,"Gabriel");
+
+        listaDinamica.adicionarElemento("Ana");
+        listaDinamica.adicionarElemento("Carlos");
+        listaDinamica.adicionarElemento("Ana");
+
+        listaDinamica.contar();
+        listaDinamica.contarOcorrencias("Ana");
+        listaDinamica.removerTodas("Ana");
+        listaDinamica.exibir();
 
     }
 }
