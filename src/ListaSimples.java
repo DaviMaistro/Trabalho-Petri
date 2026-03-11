@@ -1,4 +1,4 @@
-public class ListaSimples {
+public class ListaSimples implements ListaOperacoes{
     String[] lista;
 
     public ListaSimples(int tamanho) {
@@ -100,6 +100,7 @@ public class ListaSimples {
                 quantidade++;
             }
         }
+        System.out.println("A lista possui " + quantidade + " de itens na lista.");
         return quantidade;
     }
 
@@ -120,6 +121,7 @@ public class ListaSimples {
             System.out.println("Índice inválido.");
             return null;
         }
+        System.out.println("O elemento no índice " + indice + " é " + this.lista[indice]);
         return this.lista[indice];
     }
 

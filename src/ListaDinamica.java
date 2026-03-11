@@ -1,4 +1,4 @@
-public class ListaDinamica {
+public class ListaDinamica implements ListaOperacoes{
     No inicio;
 
     public ListaDinamica() {
@@ -91,5 +91,9 @@ public class ListaDinamica {
             System.out.println("Elemento " + elemento + " não existe na lista.");
         }
         return false;
+    }
+
+    public void removerTodas(String elemento){
+
     }
 }
