@@ -137,7 +137,7 @@ public class ListaSimples implements ListaOperacoes{
             this.lista[i] = this.lista[i - 1];
         }
         this.lista[indice] = elemento;
-        System.out.println("Elemento " + elemento + " inserido na posição " + indice + " com sucesso!");
+        System.out.println("Elemento " + elemento + " inserido no índice " + indice + " com sucesso!");
         return true;
     }
 
@@ -151,7 +151,57 @@ public class ListaSimples implements ListaOperacoes{
             this.lista[i] = this.lista[i + 1];
         }
         this.lista[this.lista.length - 1] = null;
-        System.out.println("Elemento " + removido + " removido com sucesso!");
+        System.out.println("Elemento " + removido + " removido");
         return removido;
+    }    public void limpar() {
+        for (int i = 0; i < this.lista.length; i++) {
+            this.lista[i] = null;
+        }
+        System.out.println("Todos os elementos da lista foram removidos");
+    }
+
+    public int ultimoIndiceDe(String elemento) {
+        int ultimoIndice = -1;
+
+        for (int i = 0; i < this.lista.length; i++) {
+            if (this.lista[i] != null && this.lista[i].equals(elemento)) {
+                ultimoIndice = i;
+            }
+        }
+
+        if (ultimoIndice != -1) {
+            System.out.println("O último " + elemento + " está no índice " + ultimoIndice + ".");
+        } else {
+            System.out.println("O elemento " + elemento + " não foi encontrado na lista.");
+        }
+
+        return ultimoIndice;
+    }
+
+    public int contarOcorrencias(String elemento) {
+        int quantidade = 0;
+
+        for (int i = 0; i < this.lista.length; i++) {
+            if (this.lista[i] != null && this.lista[i].equals(elemento)) {
+                quantidade++;
+            }
+        }
+
+        System.out.println("O elemento " + elemento + " aparece " + quantidade + " vez(es) na lista.");
+        return quantidade;
+    }
+
+    public int substituir(String antigo, String novo) {
+        int substituicoes = 0;
+
+        for (int i = 0; i < this.lista.length; i++) {
+            if (this.lista[i] != null && this.lista[i].equals(antigo)) {
+                this.lista[i] = novo;
+                substituicoes++;
+            }
+        }
+
+        System.out.println("Foram feitas " + substituicoes + " substituições de " + antigo + " por " + novo + ".");
+        return substituicoes;
     }
 }
